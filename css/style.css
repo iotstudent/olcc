@@ -1,0 +1,108 @@
+/* 
+    General
+*/
+body {
+    background-color:#f8f9fa !important;
+    font-family:Raleway !important;
+}
+.bg-brand {
+    background-color:rgba(182,57,59,0.8) !important;
+}
+.area {
+    height:100vh;
+}
+.btn-primary{
+    background-color:#212121 !important;
+    border: 1px solid #212121 !important;
+}
+.text-black{
+    color:#212121 !important;
+}
+
+
+
+
+
+
+/* sidenav and topnav section */
+.sidenav {
+    padding:35px 10px 25px 10px;
+}
+.sidenav--link {
+    list-style-type:none;
+    padding:10px;
+}
+.sidenav--link>a {
+    text-decoration:none;
+}
+.sidenav--link>a:hover {
+    color:rgba(0,0,0,0.6) !important;
+}
+
+
+.topnav {
+    padding:15px 5px 5px 5px;
+    border-bottom: 5px solid #fff;
+    background-color: #fff !important;
+}
+.topnav--content {
+    float:right;
+}
+.topnav--link {
+    list-style-type:none;
+    
+}
+/* responsive for topnav sidenav and mobilenav */
+@media only screen and (max-width: 764px) {
+    .sidenav,.topnav {
+      display: none !important;
+    }
+  }
+  @media only screen and (min-width: 765px) {
+    .mobilenav {
+      display: none !important;
+    }
+  }
+
+
+
+
+
+/* Dashboard */
+.kpi--icons {
+    float:right;
+    font-size:35px !important;
+    margin-top:-5px;
+}
+/* #kpi--links{
+    color: #212121 !important;
+} */
+.kpi--icons-green {
+    color:#66ff00;
+}
+.kpi--icons-light {
+    color:#f7f7f7;
+}
+.kpi {
+    border:1px solid rgba(182,57,59,0.8);
+}
+.kpi:hover {
+    border:1px solid #92dddc;
+    color: #f7f7f7 !important;
+    background-color:rgba(182,57,59,0.8);
+}
+
+
+
+
+
+
+
+/* access forms */
+.access {
+    background-color: #f8f9fa;
+}
+.access-form {
+  padding:20px;
+}
+
