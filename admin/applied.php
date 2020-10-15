@@ -74,7 +74,7 @@ include"../includes/dbconnection.php";
                                                                         <td><?php echo $name;?></td>
                                                                         <td><?php echo $phone;?></td>
                                                                         <td><?php echo $email;?></td>
-                                                                        <td><?php echo $cv;?></td>
+                                                                        <td><a href="<?php echo "../".$cv;?>" target="_blank">CV</a></td>
                                                                         <td>
                                                                             <form action="../process/processvacancy.php" method='get' style="display: inline;">
                                                                                 <input type='hidden'  name='appid' value="<?php echo $app_id; ?>" />
