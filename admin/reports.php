@@ -1,5 +1,5 @@
 <?php session_start();
-if(!isset($_SESSION['logged'])){
+if(!isset($_SESSION['adminlogged'])){
     header("Location:login.php");
 }
 ?>
@@ -10,110 +10,116 @@ if(!isset($_SESSION['logged'])){
     <section>
         <div class="container-fluid">
                <!-- mobile nav -->
-               <div class="row">
-                <div class="col-md-12" style="padding:0px !important;">
-                    <nav class="navbar  navbar-light bg-brand mobilenav">
-                        <img src="img/logo.png" alt="" class="rounded img-fluid" style="max-width:20%;">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                      
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                          <ul class="navbar-nav mr-auto">
-                            <li class="nav-item sidenav--link">
-                              <a class="text-white" href="index.html">Home </a>
-                            </li>
-                            <li class="nav-item sidenav--link">
-                              <a class="text-white" href="change.html">Password</a>
-                            </li>
-                            <li class="nav-item sidenav--link">
-                              <a class="text-white " href="#">Members</a>
-                            </li>
-                            <li class="nav-item sidenav--link">
-                                <a class="text-white" href="#">Report</a>
-                            </li>
-                            <li class="nav-item sidenav--link">
-                                <a class="text-white" href="subscription.html">Subscription</a>
-                              </li>
-                              <li class="nav-item sidenav--link">
-                                <a class="text-white" href="#">Vacancy</a>
-                              </li>
-                              <li class="nav-item sidenav--link">
-                                <a class="text-white" href="login.html">Log out</a>
-                              </li>
-                          </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+               <?php include "../includes/adminmobile.php";?>
            
             <div class="row area">
                 <!-- side nav -->
-                <div class="col-md-2 bg-brand sidenav ">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3">
-                            <img src="img/logo.png" alt="" class="rounded img-fluid">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <ul>
-                            <li class="sidenav--link"><a href="index.html" class="text-white"><i class="fa fa-dashboard mr-2"></i>Dashboard</a></li>
-                            <li class="sidenav--link"><a href="change.html" class="text-white"><i class="fa fa-lock mr-2"></i>Password</a></li>
-                            <li class="sidenav--link"><a href="members.html" class="text-white"><i class="fa fa-users mr-2"></i>Members</a></li>
-                            <li class="sidenav--link"><a href="" class="text-white"><i class="fa fa-folder mr-2"></i>Report</a></li>
-                            <li class="sidenav--link"><a href="message.html" class="text-white"><i class="fa fa-envelope mr-2"></i>Message</a></li>
-                            <li class="sidenav--link"><a href="subscription.html" class="text-white"><i class="fa fa-credit-card mr-2"></i>Subscription</a></li>
-                            <li class="sidenav--link"><a href="vacancy.html" class="text-white"><i class="fa fa-wrench mr-2"></i>Vacancy</a></li>
-                            <li class="sidenav--link"><a href="login.html" class="text-white"><i class="fa fa-power-off mr-2"></i>Log out</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <?php include "../includes/adminside.php";?>
 
                 <!-- top navigation/header -->
                 <div class="col-md-10">
-                    <header class="row topnav">
+                    
+                <div class="row">
                         <div class="col-md-12">
-                            <ul class="inline topnav--content">
-                                <li class="topnav--link"><i class="fa fa-user mr-2 text-comp"></i><span class="text-comp">Admin</span></li>
-                            </ul>
-                        </div>
-                    </header>
+                            <h4 class="text-center">Filter Area</h4>
+                            <form action="../process/processreport.php" method="post">
 
-    
-                    <!-- second level kpis -->
-                    <div class="row mt-3">
-                        <!-- table -->
-                        <div class="col-md-12 mb-2 ">
-                            <div class="card">
-                                <div class="card-header bg-dark">
-                                    <h4 class="text-white">Report <i class="fa fa-folder kpi--icons kpi--icons-light"></i></h4>
-                                   
-                                  </div>
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover table-stripped">
-                                            <thead>
-                                                <th>S/n</th>
-                                                <th>Report Title</th>
-                                                <th>Report date</th>
-                                                <th></th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Backedn Engineer</td>
-                                                    <td>2020-10-1</td>
-                                                    <td>
-                                                        <a type="submit" class="btn btn-primary" href="applied.html">View</a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                <div class="formgroup">
+                                <label for="">Gender</label>
+                                    <select name="gender" id="" class="form-control">
+                                        <option value="">All</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="formgroup">
+                                <label for="">Status</label>
+                                    <select name="status" id="" class="form-control">
+                                        <option value="">Any</option>
+                                        <option value="active">Active</option>
+                                        <option value="inactive">Inactive</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="formgroup">
+                                <label for="">Type</label>
+                                    <select name="type" id="" class="form-control">
+                                        <option value="">Any</option>
+                                        <option value="junior">Junior</option>
+                                        <option value="senior">Senior</option>
+                                        <option value="titled">Titled</option>
+                                        <option value="management">Management</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="formgroup">
+                                <label for="">Chesslevel</label>
+                                    <select name="level" id="" class="form-control">
+                                        <option value="">Any</option>
+                                        <option value="beginner">Beginner</option>
+                                        <option value="novice">Novice</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="master">Master</option>
+                                        <option value="expert">Expert</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <label for="">Registered from this date upwards</label>
+                                <div class="row">
+                                    <div class="col">
+                                    <input type="date" name="date" id="">
                                     </div>
                                 </div>
-                              </div>
+                                <br>
+                                <div class="formgroup">
+                                <label for="">State</label>
+                                    <select name="state" id="" class="form-control">
+                                        <option value="">Any</option>
+                                        <option value="abia">Abia</option>
+                                        <option value="adamawa">Adamawa</option>
+                                        <option value="akwa ibom">Akwa Ibom</option>
+                                        <option value="bauchi">Bauchi</option>
+                                        <option value="bayelsa">Bayelsa</option>
+                                        <option value="benue">Benue</option>
+                                        <option value="crossriver">Cross River</option>
+                                        <option value="delta">Delta</option>
+                                        <option value="ebonyi">Ebonyi</option>
+                                        <option value="edo">Edo</option>
+                                        <option value="ekiti">Ekiti</option>
+                                        <option value="enugu">Enugu</option>
+                                        <option value="fct">FCT</option>
+                                        <option value="gombe">Gombe</option>
+                                        <option value="imo">Imo</option>
+                                        <option value="jigawa">Jigawa</option>
+                                        <option value="kaduna">Kaduna</option>
+                                        <option value="kano">Kano</option>
+                                        <option value="katsina">Katsina</option>
+                                        <option value="kebbi">Kebbi</option>
+                                        <option value="kano">Kano</option>
+                                        <option value="kogi">Kogi</option>
+                                        <option value="kwara">Kwara</option>
+                                        <option value="lagos">Lagos</option>
+                                        <option value="nassawara">Nassawara</option>
+                                        <option value="niger">Niger</option>
+                                        <option value="ogun">Ogun</option>
+                                        <option value="ondo">ondo</option>
+                                        <option value="osun">osun</option>
+                                        <option value="oyo">oyo</option>
+                                        <option value="plateau">plateau</option> 
+                                        <option value="rivers">rivers</option>
+                                        <option value="sokoto">sokoto</option>
+                                        <option value="taraba">Taraba</option>
+                                        <option value="yobe">Yobe</option>
+                                        <option value="kano">Zamfara</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <input type="submit" name="report" value="Process" class="btn btn-primary btn-block">
+                            </form>
                         </div>
                     </div>
+                    <hr class="bg-brand">      
+    
                     
                 </div>
             </div>

@@ -1,10 +1,8 @@
 <?php session_start();
-if(!isset($_SESSION['logged'])){
+if(!isset($_SESSION['adminlogged'])){
     header("Location:login.php");
 }
 ?>
-<?php include "../includes/dbconnection.php";?>
-<?php include "../includes/head.php";?>
 <?php 
 include"../includes/head.php";
 include"../includes/dbconnection.php";

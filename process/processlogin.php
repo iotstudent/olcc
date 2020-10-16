@@ -1,5 +1,4 @@
 <?php session_start();?>
-
 <?php
 include "../includes/dbconnection.php";
 include "../includes/formfunctions.php";
@@ -43,7 +42,7 @@ if(mysqli_num_rows($result)==1){
     //extract data from db row and store in an array
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         $db_password = $row["password"];
-        $_SESSION['logged'] = $row["admin_id"];
+        $_SESSION['adminlogged'] = $row["admin_id"];
         $_SESSION['username'] = $row["username"];
         
         

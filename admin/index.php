@@ -1,8 +1,8 @@
 <?php session_start();
-if(!isset($_SESSION['logged'])){
+if(!isset($_SESSION['adminlogged'])){
     header("Location:login.php");
 }
-$id = $_SESSION['logged'];
+$id = $_SESSION['adminlogged'];
 ?>
 
 <?php include "../includes/head.php";?>
