@@ -19,7 +19,7 @@ include"../includes/formfunctions.php";
         $insert = mysqli_query($conn,$sql);
         if($insert){
         $_SESSION['message']=" Member created ";
-        header('Location:../admin/membersuc.php');
+        header('Location:../admin/createmembersuc.php');
         die();
         }else{
         echo  'failed'. mysqli_error($conn);

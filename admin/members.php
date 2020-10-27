@@ -36,7 +36,7 @@ include"../includes/dbconnection.php";
                     
                     <div class="row mt-3">
                         <div class="col-md-2 mb-1">
-                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal">Create member</button>
+                            <a class="btn btn-primary" href="createmember.php">Create member</a>
                         </div>
                         
                          <!-- search form -->
@@ -140,44 +140,4 @@ include"../includes/dbconnection.php";
             </div>
         </div>
     </section>
-
-    <!-- popup modal for create member -->
-    <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Create Member</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form action="../process/processmembers.php" method="post">
-              <div class="form-group">
-                  <input type="text" name="fname" class="form-control" placeholder="First name">
-              </div>
-              <div class="form-group">
-                <input type="text" name="lname" class="form-control" placeholder="Last name">
-              </div>
-              <div class="form-group">
-                <input type="email" name="email"  class="form-control" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <input type="password" name="password"  class="form-control" placeholder="User Password">
-              </div>
-          
-        </div>
-        <div class="modal-footer">
-            <div class="form-group">
-                <input type="submit" name="create" value="Create" class="btn btn-primary">
-            </div>
-        </div>
-    </form>
-      </div>
-    </div>
-  </div>
-
-    
-</body>
-</html>
+    <?php include "../includes/footer.php";?>

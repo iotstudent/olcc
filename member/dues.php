@@ -25,12 +25,14 @@ $id=$_SESSION['logged'];
 
                 <!-- top navigation/header -->
                 <div class="col-md-10">
-                    <header class="row topnav">
-                        <div class="col-md-12">
-                        <span><?php success_alert();error_alert();?></span>
-                            <ul class="inline topnav--content">
-                                <li class="topnav--link"><i class="fa fa-user mr-2 text-comp"></i><span class="text-comp">Admin</span></li>
-                            </ul>
+                     <header class="row topnav">
+                        <div class="col-md-6">
+                            <span style="text-transform:capitalize"><?php echo $_SESSION['username'];?></span>
+                            <span style="margin-left:15px;font-weight:bolder;"> <?php echo $_SESSION['code'];?></span>
+                        </div>
+                        <div class="col-md-6">
+                        <?php success_alert();?>
+                            
                         </div>
                     </header>
 

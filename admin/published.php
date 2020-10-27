@@ -103,5 +103,4 @@ include"../includes/dbconnection.php"
             </div>
         </div>
     </section>
-</body>
-</html>
+    <?php include "../includes/footer.php";?>

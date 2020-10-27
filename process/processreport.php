@@ -198,12 +198,11 @@ include"../includes/dbconnection.php";
                
                                 ?>
                                 
-                                               
-                                            </tbody>
-                                        </table>
-                                    </div>
-                              </div>
-                        
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </section>    

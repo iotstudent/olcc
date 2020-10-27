@@ -9,7 +9,7 @@ include"../includes/formfunctions.php";
 
 
     //create post on message page
-        if(isset($_POST['done'])){
+        if(isset($_POST['create'])){
 
             $messagetitle =  test_input($_POST["messagetitle"]);
             $messagebody =  test_input($_POST["messagebody"]);
@@ -22,7 +22,7 @@ include"../includes/formfunctions.php";
         $insert = mysqli_query($conn,$sql);
         if($insert){
         $_SESSION['message']="Message sent ";
-        header('Location:../admin/messagesuc.php');
+        header('Location:../admin/createmessagesuc.php');
         die();
         }else{
         echo  mysqli_error($conn);

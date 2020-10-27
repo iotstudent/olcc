@@ -22,15 +22,14 @@ $id=$_SESSION['logged'];
                 <div class="col-md-10">
                     <header class="row topnav">
                         <div class="col-md-6">
-                            <span><?php echo $_SESSION['username'];?></span>
-                            <span style="margin-left:15px;"> <?php echo $_SESSION['code'];?></span>
+                            <span style="text-transform:capitalize"><?php echo $_SESSION['username'];?></span>
+                            <span style="margin-left:15px;font-weight:bolder;"> <?php echo $_SESSION['code'];?></span>
                         </div>
                         <div class="col-md-6">
                         <?php success_alert();?>
                             
                         </div>
                     </header>
-
     
                      
                     <!-- dashboard area -->

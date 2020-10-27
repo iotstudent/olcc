@@ -1,5 +1,5 @@
 <?php session_start();
-$id = $_SESSION['logged'];
+$id = $_SESSION['adminlogged'];
 ?>
 <?php include "../includes/dbconnection.php";?>
 <?php include "../includes/formfunctions.php";?>
@@ -63,5 +63,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                         die();
                     }
         
-              }   
-        }
+              } 
+      }

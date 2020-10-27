@@ -144,10 +144,4 @@ include"../includes/dbconnection.php";
         </div>
     </section>
 
-   
-
-
-   
-    
-</body>
-</html>
+    <?php include "../includes/footer.php";?>

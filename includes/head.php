@@ -10,4 +10,5 @@
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/timeout.js"></script>
+    <link rel="stylesheet" href="../css/sidebar-menu.css">
     <link rel="icon" href="../img/logo.png" type="image/png" sizes="16x16"> 

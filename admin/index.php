@@ -132,7 +132,4 @@ $id = $_SESSION['adminlogged'];
             </div>
         </div>
     </section>
-
-    
-</body>
-</html>
+    <?php include "../includes/footer.php";?>

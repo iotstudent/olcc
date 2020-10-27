@@ -18,8 +18,13 @@ body {
 .text-black{
     color:#212121 !important;
 }
-
-
+.text-brand {
+    color:rgba(182,57,59,0.8) !important;
+}
+.btn-brand {
+    background-color:rgba(182,57,59,0.8) !important;
+    color:#f7f7f7 !important;
+}
 
 
 
@@ -101,6 +106,9 @@ body {
 /* access forms */
 .access {
     background-color: #f8f9fa;
+}
+.access-inner {
+    background-color: #f8f9fd;
 }
 .access-form {
   padding:20px;

@@ -152,6 +152,4 @@ if(!isset($_SESSION['adminlogged'])){
     </div>
   </div>
 
-    
-</body>
-</html>
+  <?php include "../includes/footer.php";?>

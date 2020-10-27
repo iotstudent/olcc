@@ -103,8 +103,4 @@ if(isset($_POST['formupgrade'])){
 
    
 
-
-   
-    
-</body>
-</html>
+    <?php include "../includes/footer.php";?>

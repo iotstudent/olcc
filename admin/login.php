@@ -6,15 +6,11 @@
 </head>
 <body class="bg-brand">
 <div class="container-fluid">
-    <div class="row mb-5">
-        <div class="col-md-12 bg-brand">
-            <h2 class="text-center text-white">Admin</h2>
-        </div>
-    </div>
 
     <div class="row mt-5">
         <div class="col-md-4 offset-md-4">
             <div class="card card-body access">
+            <h2 class="text-center text-brand">Admin</h2>
                 <form action="../process/processlogin.php" class="access-form" method="post">
                    
                     <div class="row">
@@ -33,7 +29,7 @@
                         <input type="password" name="password"  class="form-control" Placeholder="Password">
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Login"  class="btn btn-success" style="float:right;">
+                        <input type="submit" value="Login"  class="btn btn-brand" style="float:right;color:#f7f7f7 !important;">
                     </div>
                     
                 </form>
