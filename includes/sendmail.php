@@ -4,7 +4,7 @@ require_once '../vendor/autoload.php';
 // Create the Transport
 $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
     ->setUsername("promisebeeceo@gmail.com")
-    ->setPassword("godandme");
+    ->setPassword("");
 
 // Create the Mailer using your created Transport
 $mailer = new Swift_Mailer($transport);
