@@ -5,7 +5,7 @@ require_once '../vendor/autoload.php';
 $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
     ->setUsername("promisebeeceo@gmail.com")
 <<<<<<< HEAD
-    ->setPassword("Nwanozie!97");
+    ->setPassword("");
 =======
     ->setPassword("");
 >>>>>>> 507bd36feabfaf7810322fa9ae05377dfe787f70
