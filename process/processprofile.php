@@ -20,14 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       $gender = test_input($_POST["gender"]);
       $age = test_input($_POST["age"]);
       $chesslevel = test_input($_POST["chesslevel"]);
-  
+      $fidetitle = test_input($_POST["fidetitle"]);
+      $fideno = test_input($_POST["fideno"]);
   
   }
   
   
   
   
-  $sql = " UPDATE users SET user_firstname = '$fname', user_lastname = '$lname',username = '$uname',user_email = '$email',user_phone = '$phone',user_state = '$state',user_lga = '$lga',user_street = '$street',user_bday = '$bday',user_gender = '$gender',user_age = '$age',user_chesslevel = '$chesslevel' WHERE user_id = '$id' ";
+  $sql = " UPDATE users SET user_firstname = '$fname', user_lastname = '$lname',username = '$uname',user_email = '$email',user_phone = '$phone',user_state = '$state',user_lga = '$lga',user_street = '$street',user_bday = '$bday',user_gender = '$gender',user_age = '$age',user_chesslevel = '$chesslevel',fide_title='$fidetitle',fide_number='$fideno' WHERE user_id = '$id' ";
       if($result = mysqli_query($conn,$sql)){
         // reset data  session        
             $_SESSION['username'] = $uname;
@@ -43,6 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $_SESSION['age'] = $age;
             $_SESSION['chesslevel'] = $chesslevel;
             $_SESSION['code'] = $code;
+            $_SESSION['fideno'] = $fideno;
+            $_SESSION['fidetitle'] = $fidetitle;
             $_SESSION['message'] = " Profile successfully updated";
             header("Location:../member/index.php");
             die();

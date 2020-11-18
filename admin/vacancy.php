@@ -50,10 +50,12 @@ if(!isset($_SESSION['adminlogged'])){
                                   </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-stripped">
+                                        <table class="table table-hover table-stripped table-bordered">
                                             <thead>
-                                                <th>S/n</th>
+                                                <th></th>
                                                 <th>Job Title</th>
+                                                <th>Job Type</th>
+                                                <th>Job Description</th>
                                                 <th>Deadline</th>
                                                 <th></th>
                                                 <th></th>
@@ -71,19 +73,23 @@ if(!isset($_SESSION['adminlogged'])){
                                 $job_id= $row['job_id'];
                                 $job_title = $row['job_title'];
                                 $job_dsc = $row['job_dsc'];
+                                $job_type = $row['job_type'];
                                 $deadline = $row['deadline'];
                                 ?>
                                 
                                 <tr>
                                     <td><?php echo $n;?></td>
                                     <td><?php echo  $job_title;?></td>
+                                    <td><?php echo  $job_type;?></td>
                                     <td><?php echo  $job_dsc;?></td>
                                     <td><?php echo  $deadline;?></td>
                                     <td>
-                                        <form action="applied.php" method='post' style="display: inline;">
+                                        <form action="applied.php" method='get' style="display: inline;">
                                             <input type='hidden'  name='jobid' value="<?php echo $job_id; ?>" />
                                             <input type='submit' name='applied' class="btn  btn-primary " value="View" />
                                         </form>
+                                    </td>
+                                    <td>
                                         <form action="../process/processvacancy.php" method='post' style="display: inline;">
                                             <input type='hidden'  name='jobid' value="<?php echo $job_id; ?>" />
                                             <input type='submit' name='deletejob' class="btn  btn-danger " value="Delete" />
@@ -132,13 +138,21 @@ if(!isset($_SESSION['adminlogged'])){
                   <input type="text" name="jobtitle" class="form-control" placeholder="Job Title">
               </div>
               <div class="form-group">
+              <label for="">Job Type</label>
+                  <select name="jobtype" class="form-control" >
+                        <option value="contract">Contract</option>
+                        <option value="permanent">Permanent</option>
+                        <option value="volunteer">Volunteer</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                    <label for="">Job Description</label>
+                    <textarea name="jobdsc" cols="30" rows="10" class="form-control"></textarea>
+              </div>
+              <div class="form-group">
               <label for="">Deadline</label>
                 <input type="date" name="deadline" class="form-control" placeholder="Deadline">
             </div>
-              <div class="form-group">
-                 
-                    <textarea name="jobdsc" cols="30" rows="10" class="form-control">job Description</textarea>
-              </div>
         </div>
         <div class="modal-footer">
             <div class="row">

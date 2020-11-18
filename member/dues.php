@@ -56,7 +56,7 @@ $id=$_SESSION['logged'];
                                         <table class="table table-hover table-stripped">
                                             <thead>
                                                 <th></th>
-                                                <th>Duration(yearly)</th>
+                                                <th>Duration</th>
                                                 <th>Starts</th>
                                                 <th>Ends</th>
                                                 <th>Amount</th>

@@ -36,7 +36,7 @@ include"../includes/count.php";
                         <div class="col-md-12 mb-2 ">
                             <div class="card">
                                 <div class="card-header bg-dark">
-                                    <h4 class="text-white">Create Message<i class="fa fa-envelope-open kpi--icons kpi--icons-light"></i></h4>
+                                    <h4 class="text-white">Create Notification<i class="fa fa-bell kpi--icons kpi--icons-light"></i></h4>
                                   </div>
                                 <div class="card-body">
                                     <form action="../process/processmessage.php" method='post'>

@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 $sql= " SELECT * FROM users WHERE user_email = '$data' OR  (user_code='$data') ";
     if($result = mysqli_query($conn,$sql)){
         if (mysqli_num_rows($result)<1){
-            $_SESSION['error'] = " memebership code or email is not registered";
+            $_SESSION['error'] = " membership code or email is not registered";
             header("Location:../member/login.php");
             die();
           }       
@@ -42,7 +42,7 @@ if(mysqli_num_rows($result)==1){
     //extract data from db row and store in an array
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         $db_password = $row["user_password"];
-        $_SESSION['logged'] = $row["user_id"];
+     
         $_SESSION['username'] = $row["username"];
         $_SESSION['fname'] = $row["user_firstname"];
         $_SESSION['lname'] = $row["user_lastname"];
@@ -58,9 +58,18 @@ if(mysqli_num_rows($result)==1){
         $_SESSION['street'] = $row["user_street"];
         $_SESSION['age'] = $row["user_age"];
         $_SESSION['bday'] = $row["user_bday"];
+        $_SESSION['fideno'] = $row["fide_number"];
+        $_SESSION['fidetitle'] = $row["fide_title"];
+        $able=$row["user_disabled"];  
         
     // check for password matching
     if(password_verify($password, $db_password)){
+        if($able=="yes"){
+            $_SESSION['error'] = "Your account has been diabled contact Admin";
+            header("Location:../member/login.php");
+            die();  
+          }
+        $_SESSION['logged'] = $row["user_id"];
         header("Location:../member/index.php");
         die();
       }else{

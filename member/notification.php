@@ -37,8 +37,7 @@ include"../includes/count.php";
                         <div class="col-md-12 mb-2 ">
                             <div class="card">
                                 <div class="card-header bg-dark">
-                                    <h4 class="text-white">Messages<i class="fa fa-envelope kpi--icons kpi--icons-light"></i></h4>
-                                   
+                                    <h4 class="text-white">Notification<i class="fa fa-bell kpi--icons kpi--icons-light"></i></h4>
                                   </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -47,8 +46,8 @@ include"../includes/count.php";
                                                 <th></th>
                                                 <th>Title</th>
                                                 <th>Body</th>
-                                                <th>Status</th>
                                                 <th>Date</th>
+                                                <th></th>
                                                 <th></th>
                                             </thead>
                                             <tbody>
@@ -62,7 +61,6 @@ include"../includes/count.php";
                             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
                                 $msg_id = $row['message_id'];
                                 $msg_title = $row['message_title'];
-                                $msg_status = $row['message_status'];
                                 $msg_date = $row['message_date'];
                                 $msg_body = $row['message_body'];
                             
@@ -72,7 +70,6 @@ include"../includes/count.php";
                                     <td><?php echo $n;?></td>
                                     <td><?php echo $msg_title;?></td>
                                     <td><?php echo $msg_body;?></td>
-                                    <td><?php echo $msg_status;?></td>
                                     <td><?php echo $msg_date;?></td>
                                     <td>
                                         <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<?php echo $msg_id; ?>"> view</button> 
@@ -92,13 +89,10 @@ include"../includes/count.php";
                                                 </div>
                                             </div>
                                             </div>    
-
-                                            <!-- form for deleting -->
-                                        <form action="../process/processmessage.php" method='post' style="display: inline;">
-                                            <input type='hidden'  name='msgid' value="<?php echo $msg_id; ?>" />
-                                            <input type='submit' name='deletemsg' class="btn  btn-danger " value="Delete" />
-                                        </form>
-                                    </td>              
+                                    </td>   
+                                    <td>
+                                        
+                                    </td>           
                                 </tr>
                                 
                             <?php  

@@ -48,12 +48,13 @@ include"../includes/dbconnection.php"
                                                 <th>Status</th>
                                                 <th>Date</th>
                                                 <th></th>
+                                                <th></th>
                                             </thead>
                                             <tbody>
 
             <?php
                 
-                $sql= " SELECT * FROM message WHERE  user_id = '$id' AND message_status ='published'";
+                $sql= " SELECT * FROM message WHERE  message_status ='published'";
                 if($result = mysqli_query($conn,$sql)){ 
                         if (mysqli_num_rows($result)>0){
                             $n=1;
@@ -72,6 +73,12 @@ include"../includes/dbconnection.php"
                                     <td><?php echo $msg_body;?></td>
                                     <td><?php echo $msg_status;?></td>
                                     <td><?php echo $msg_date;?></td>
+                                    <td>
+                                        <form action="../process/processmessage.php" method='post' style="display: inline;">
+                                            <input type='hidden'  name='msgid' value="<?php echo $msg_id; ?>" />
+                                            <input type='submit' name='draftmsg' class="btn  btn-success " value="Draft" />
+                                        </form>
+                                    </td>
                                     <td>
                                         <form action="../process/processmessage.php" method='post' style="display: inline;">
                                             <input type='hidden'  name='msgid' value="<?php echo $msg_id; ?>" />

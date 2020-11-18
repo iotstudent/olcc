@@ -11,28 +11,28 @@
                             <li class="nav-item sidenav--link">
                               <a class="text-white" href="index.php">Home </a>
                             </li>
+                           
                             <li class="nav-item sidenav--link">
+                              <a class="text-white" href="notification.php">Notifiactions</a>
+                            </li>
+                            
+                               <li class="nav-item sidenav--link">
+                                  <a class="text-white " href="members.php">Members</a>
+                                </li>
+                            <?php 
+                            if($_SESSION['type'] != "management"){
+                                echo '
+                                <li class="nav-item sidenav--link">
+                                    <a class="text-white" href="dues.php">Subscription</a>
+                                  </li>';
+                              }
+                            ?>
+                               <li class="nav-item sidenav--link">
                                 <a class="text-white" href="profile.php">Profile</a>
                               </li>
                             <li class="nav-item sidenav--link">
                               <a class="text-white" href="change.php">Password</a>
                             </li>
-                            <?php 
-                            if($_SESSION['type'] == "management"){
-                                echo '
-                                <li class="nav-item sidenav--link">
-                                  <a class="text-white " href="members.php">Members</a>
-                                </li>';
-                              }
-                              ?>
-                            <?php 
-                            if($_SESSION['type'] != "management"){
-                                echo '
-                                <li class="nav-item sidenav--link">
-                                    <a class="text-white" href="dues.php">Dues</a>
-                                  </li>';
-                              }
-                            ?>
                               <li class="nav-item sidenav--link">
                                 <a class="text-white" href="logout.php">Log out</a>
                               </li>

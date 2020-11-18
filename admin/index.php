@@ -59,9 +59,9 @@ $id = $_SESSION['adminlogged'];
                         <div class="col-md-4 mb-2">
                             <div class="card  kpi">
                                 <div class="card-body">
-                                    <h5 class="card-title text-comp">Message</h5>
+                                    <h5 class="card-title text-comp">Total Notifications</h5>
                                     <span class="card-text"><?php countMessages();?></span>
-                                    <i class="fa fa-envelope kpi--icons"></i>
+                                    <i class="fa fa-bell kpi--icons"></i>
                                 </div>
                               </div>
                         </div>
@@ -78,9 +78,9 @@ $id = $_SESSION['adminlogged'];
                                   </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-stripped">
+                                        <table class="table table-hover table-stripped  table-bordered">
                                             <thead>
-                                                <th>S/n</th>
+                                                <th></th>
                                                 <th>Job Title</th>
                                                 <th>Job Description</th>
                                                 <th>Deadline</th>

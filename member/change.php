@@ -37,15 +37,13 @@ $id=$_SESSION['logged'];
                                     </div>
                                 </div>
                                     <div class="row">
-                                        <div class="col-md-4 offset-md-4 mb-4">
-                                            <img src="../img/logo.png" alt="" class="img-fluid center">
-                                        </div>
+                                       
                                         <div class="col-md-10 offset-md-1 mb-1">
                                             <div class="flash"><?php error_alert();?></div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" name="password"  class="form-control" Placeholder="Passowrd">
+                                        <input type="password" name="password"  class="form-control" Placeholder="Password">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" name="npassword"  class="form-control" Placeholder="Enter New password">
@@ -54,7 +52,7 @@ $id=$_SESSION['logged'];
                                         <input type="password" name="rnpassword"  class="form-control" Placeholder="Re-enter New password">
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" value="Login"  class="btn btn-brand" style="float:right;">
+                                        <input type="submit" value="Change"  class="btn btn-brand" style="float:right;">
                                     </div>
                                     
                                 </form>

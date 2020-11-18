@@ -18,16 +18,19 @@
                               <a class="text-white " href="members.php">Members</a>
                             </li>
                             <li class="nav-item sidenav--link">
+                              <a class="text-white " href="createnotification.php">Create Notification</a>
+                            </li>
+                            <li class="nav-item sidenav--link">
+                              <a class="text-white " href="notification.php"> Notifications </a>
+                            </li>
+                            <li class="nav-item sidenav--link">
                                 <a class="text-white" href="reports.php">Report</a>
                             </li>
                             <li class="nav-item sidenav--link">
-                                <a class="text-white" href="duespayment.php">Dues</a>
+                                <a class="text-white" href="duespayment.php">Subscriptions</a>
                               </li>
                               <li class="nav-item sidenav--link">
                                 <a class="text-white" href="vacancy.php">Vacancy</a>
-                              </li>
-                              <li class="nav-item sidenav--link">
-                                <a class="text-white" href="store.php">store</a>
                               </li>
                               <li class="nav-item sidenav--link">
                                 <a class="text-white" href="login.php">Log out</a>

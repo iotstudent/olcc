@@ -33,20 +33,11 @@ include"../includes/dbconnection.php";
                     <!-- dashboard area -->
                     <div class="row mt-2">
                         <!-- top kpis -->
-                        <div class="col-md-3 mb-1">
-                            <a class="btn btn-primary" href="createmessage.php">Create message</a>
+                        <div class="col-md-4 mb-1">
+                            <a class="btn btn-primary" href="createnotification.php">Send Notification</a>
                         </div>
-                        <div class="col-md-3 mb-1">
-                            <div class="card  kpi">
-                                <div class="card-body">
-                                  <h5 class="card-title">Messages</h5>
-                                  <span><?php countMessages();?></span>
-                                  <i class="fa fa-envelope kpi--icons"></i>
-                                </div>
-                              </div>
-                        </div>
-
-                        <div class="col-md-3 mb-1">
+                    
+                        <div class="col-md-4 mb-1">
                             <div class="card  kpi">
                                 <div class="card-body">
                                     <a href="published.php" style="color:#212121;text-decoration:none;">
@@ -58,7 +49,7 @@ include"../includes/dbconnection.php";
                               </div>
                         </div>
 
-                        <div class="col-md-3 mb-1">
+                        <div class="col-md-4 mb-1">
                             <div class="card  kpi">
                                 <div class="card-body">
                                     <a href="drafts.php" style="color:#212121;text-decoration:none;">
@@ -78,8 +69,7 @@ include"../includes/dbconnection.php";
                         <div class="col-md-12 mb-2 ">
                             <div class="card">
                                 <div class="card-header bg-dark">
-                                    <h4 class="text-white">Messages<i class="fa fa-envelope kpi--icons kpi--icons-light"></i></h4>
-                                   
+                                    <h4 class="text-white">Notifications<i class="fa fa-bell kpi--icons kpi--icons-light"></i></h4>
                                   </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -164,10 +154,5 @@ include"../includes/dbconnection.php";
                 </div>
             </div>
         </div>
-    </section>
-   
-
-
-                
-                    
+    </section>    
 <?php include "../includes/footer.php";?>

@@ -2,7 +2,7 @@
 session_start();
 include "../includes/dbconnection.php";
 include "../includes/formfunctions.php";
-
+date_default_timezone_set('Africa/Lagos');
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
  
@@ -76,8 +76,9 @@ $time=date("is");
 $randomid = mt_rand(10000,99999);
 $code = "OLCC".$randomid * $time;
 
+$date=date('Y-m-d');
 //inserting user data to db
-$sql = " INSERT INTO users (user_firstname,user_lastname,user_email,user_password,user_code) VALUES ('$fname','$lname','$email','$password','$code') ";
+$sql = " INSERT INTO users (user_firstname,user_lastname,user_email,user_password,user_code,reg_date) VALUES ('$fname','$lname','$email','$password','$code','$date') ";
 $insert = mysqli_query($conn,$sql);
 if($insert){
     $_SESSION['message'] = " Registration Successful";

@@ -57,9 +57,11 @@ $id=$_SESSION['logged'];
                         <div class="col-md-4 mb-2">
                             <div class="card  kpi">
                                 <div class="card-body">
-                                    <h5 class="card-title">Message</h5>
+                                    <a href="notification.php" style="color:#212121;text-decoration:none;">
+                                        <h5 class="card-title">Notifications</h5>
+                                    </a>
                                     <span class="card-text"><?php countMessages();?></span>
-                                    <i class="fa fa-envelope kpi--icons"></i>
+                                    <i class="fa fa-bell kpi--icons"></i>
                                 </div>
                               </div>
                         </div>
@@ -67,12 +69,12 @@ $id=$_SESSION['logged'];
                         <div class="col-md-4 mb-2">
                             <div class="card  kpi">
                                 <div class="card-body">
-                                    <h5 class="card-title">Membership status</h5>
+                                    <h5 class="card-title">Membership Status</h5>
                                     <?php
                                         if($_SESSION['status']=="active"){
-                                            echo " <i class='fa fa-wifi kpi--icons kpi--icons-green'></i>";
+                                            echo " <i class='fa fa-wifi kpi--icons kpi--icons-green'></i><h6>active</h6>";
                                         }else{
-                                            echo "<i class='fa fa-wifi kpi--icons'></i>";
+                                            echo "<i class='fa fa-wifi kpi--icons-red'></i><h6>inactive</h6>";
                                         }
                                     ?>
                                 </div>

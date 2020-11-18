@@ -41,10 +41,10 @@ include"../includes/dbconnection.php";
                         
                          <!-- search form -->
                         <div class="col-md-10 mb-1">
-                          <form action="search.php" method="post">
+                          <form action="search.php" method="get">
                             <div class="row">
                               <div class="col-9">
-                                <input type="text" name="query" class="form-control" placeholder=" Search for member ">
+                                <input type="text" name="query" class="form-control" placeholder=" Search for member by name , username or code ">
                               </div>
                               <div class="col-3">
                                 <input type="submit" value="Search" name="search" class="btn btn-primary">
@@ -65,17 +65,22 @@ include"../includes/dbconnection.php";
                                   </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-hover table-stripped">
+                                        <table class="table table-hover table-stripped table-bordered">
                                             <thead>
                                                 <th></th>
-                                                <th>First name</th>
-                                                <th>Last name</th>
+                                                <th>Name</th>
+                                                <th>OLCC ID</th>
                                                 <th>Type</th>
-                                                <th>Code</th>
-                                                <th>Membership status</th>
+                                                <th>FIDE no</th>
+                                                <th>FIDE Title</th>
+                                                <th>Chesslevel</th>
+                                                <th>Status</th>
                                                 <th>Phone no</th>
                                                 <th>Email</th>
                                                 <th>Gender</th>
+                                                <th>Birthday</th>
+                                                <th>Age</th>
+                                                <th>Address</th>
                                                 <th></th>
                                             </thead>
                                             <tbody>
@@ -96,23 +101,35 @@ include"../includes/dbconnection.php";
                                 $user_email = $row['user_email'];
                                 $user_gender = $row['user_gender'];
                                 $user_status = $row['user_status'];
-                            
+                                $fideno = $row["fide_number"];
+                                $fidetitle = $row["fide_title"];
+                                $bday = $row["user_day"];
+                                $age = $row["user_age"];
+                                $chesslevel = $row["user_chesslevel"];
+                                $state = $row["user_state"];
+                                $street = $row["user_street"];
+                                $lga = $row["user_lga"];
                                 ?>
                                 
                                 <tr>
                                     <td><?php echo $n;?></td>
-                                    <td><?php echo  $user_firstname;?></td>
-                                    <td><?php echo  $user_lastname;?></td>
-                                    <td><?php echo  $user_type;?></td>
+                                    <td><?php echo  $user_firstname." ".$user_lastname;?></td>
                                     <td><?php echo  $user_code;?></td>
+                                    <td><?php echo  $user_type;?></td>
+                                    <td><?php echo  $fideno?></td>
+                                    <td><?php echo $fidetitle;?></td>
+                                    <td><?php echo  $chesslevel;?></td>
                                     <td><?php echo  $user_status;?></td>
                                     <td><?php echo  $user_phone;?></td>
                                     <td><?php echo  $user_email;?></td>
                                     <td><?php echo  $user_gender;?></td>
+                                    <td><?php echo  $bday;?></td>
+                                    <td><?php echo  $age;?></td>
+                                    <td><?php echo  $street ."\n". $state ."\n".$lga;?></td>
                                     <td>
-                                      <form action="upgrade.php" method='post' style="display: inline;">
+                                      <form action="upgrade.php" method='get' style="display: inline;">
                                             <input type='hidden'  name='userid' value="<?php echo $user_id; ?>" />
-                                            <input type='submit' name='formupgrade' class="btn btn-primary" value="Upgrade"/>
+                                            <input type='submit' name='formedit' class="btn btn-primary" value="Edit"/>
                                       </form>
                                     </td>              
                                 </tr>

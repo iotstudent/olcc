@@ -44,29 +44,35 @@ if(!isset($_SESSION['logged'])){
                                             </div>
                                             <div class="row">
                                                 <div class="col">
+                                                    <label for=""><b>First Name</b></label>
                                                     <input type="text" name="fname" class="form-control" placeholder="First Name"
                                                     value="<?php if(isset($_SESSION['fname'])){ echo $_SESSION['fname'];} ?>">
                                                 </div>
                                                 <div class="col">
+                                                <label for=""><b>Last Name</b></label>
                                                     <input type="text" name="lname" class="form-control" placeholder="Last Name"
                                                     value="<?php if(isset($_SESSION['lname'])){ echo $_SESSION['lname'];} ?>">
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="form-group">
+                                            <label for=""><b>User Name</b></label>
                                                 <input type="text" name="uname" class="form-control" placeholder="User Name"
                                                 value="<?php if(isset($_SESSION['username'])){ echo $_SESSION['username'];} ?>">
                                             </div>
                                             <div class="form-group">
+                                                <label for=""><b>OLCC Code</b></label>
                                                 <input type="text" name="code" class="form-control" placeholder="Membership code" disabled
                                                 value="<?php if(isset($_SESSION['code'])){ echo $_SESSION['code'];} ?>">
                                             </div>
                                             <div class="row">
                                                 <div class="col">
+                                                <label for=""><b>Phone</b></label>
                                                     <input type="text" name="phone" class="form-control" placeholder="Phone Number"
                                                     value="<?php if(isset($_SESSION['phone'])){ echo $_SESSION['phone'];} ?>">
                                                 </div>
                                                 <div class="col">
+                                                    <label for=""><b>Email</b></label>
                                                     <input type="email" name="email" class="form-control" placeholder="Email"
                                                     value="<?php if(isset($_SESSION['email'])){ echo $_SESSION['email'];} ?>">
                                                 </div>
@@ -74,7 +80,7 @@ if(!isset($_SESSION['logged'])){
                                             <br>
                                             <div class="row">
                                                 <div class="col">
-                                                  
+                                                    <label for=""><b>State</b></label>
                                                     <select name="state"  class="form-control"> 
                                                     <option value="<?php if(isset($_SESSION['state'])){ echo $_SESSION['state'];} ?>">
                                                     <?php echo $_SESSION['state']; ?></option>
@@ -117,22 +123,25 @@ if(!isset($_SESSION['logged'])){
                                                     </select>
                                                 </div>
                                                 <div class="col">
+                                                    <label for=""><b>Local govt</b></label>
                                                     <input type="text" name="lga" class="form-control" placeholder="LGA"
                                                     value="<?php if(isset($_SESSION['lga'])){ echo $_SESSION['lga'];} ?>">
                                                 </div>
                                                 <div class="col">
+                                                <label for=""><b>Street</b></label>
                                                     <input type="text" name="street" class="form-control" placeholder="Street address"
                                                     value="<?php if(isset($_SESSION['street'])){ echo $_SESSION['street'];} ?>">
                                                 </div>
                                             </div>
-                                            <br/>
                                             <br>
                                             <div class="row">
                                                 <div class="col">
+                                                <label for=""><b>Member type</b></label>
                                                     <input type="text" nameber="type" class="form-control" placeholder="Member type" disabled
                                                     value="<?php if(isset($_SESSION['type'])){ echo $_SESSION['type'];} ?>">
                                                 </div>
                                                 <div class="col">
+                                                    <label for=""><b>Gender</b></label>
                                                     <select name="gender" id="" class="form-control">
                                                     <option value="<?php if(isset($_SESSION['gender'])){ echo $_SESSION['gender'];} ?>">
                                                     <?php echo $_SESSION['gender']; ?></option>
@@ -144,8 +153,9 @@ if(!isset($_SESSION['logged'])){
                                             <br>
                                             <div class="row">
                                                 <div class="col">
+                                                <label for=""><b>Age bracket</b></label>
                                                 <select name="age" id="" class="form-control">
-                                                <option value="<?php if(isset($_SESSION['age'])){ echo $_SESSION['gender'];} ?>">
+                                                <option value="<?php if(isset($_SESSION['age'])){ echo $_SESSION['age'];} ?>">
                                                     <?php echo $_SESSION['age']; ?></option>
                                                         <option value="3-10" >3-10</option>
                                                         <option value="10-21">10-21</option>
@@ -153,13 +163,14 @@ if(!isset($_SESSION['logged'])){
                                                     </select>
                                                 </div>
                                                 <div class="col">
+                                                <label for=""><b>Birthday</b></label>
                                                 <input type="date" name="bday" id="" class="form-control"
                                                 value="<?php if(isset($_SESSION['bday'])){ echo $_SESSION['bday'];} ?>">
-
                                                 </div>
                                                 <div class="col">
+                                                <label for=""><b>Chesslevel</b></label>
                                                     <select name="chesslevel" id="" class="form-control">
-                                                    <option value="<?php if(isset($_SESSION['chesslevel'])){ echo $_SESSION['gender'];} ?>">
+                                                    <option value="<?php if(isset($_SESSION['chesslevel'])){ echo $_SESSION['chesslevel'];} ?>">
                                                     <?php echo $_SESSION['chesslevel']; ?></option>
                                                         <option value="novie" >Novice</option>
                                                         <option value="beginner">Beginner</option>
@@ -169,6 +180,28 @@ if(!isset($_SESSION['logged'])){
                                                     </select>
                                                 </div>
                                             </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col">
+                                                <label for=""><b>FIDE Number</b></label>
+                                                 <input type="text" name="fideno" class="form-control" placeholder="FIDE NO"
+                                                 value="<?php if(isset($_SESSION['fideno'])){ echo $_SESSION['fideno'];} ?>">
+                                                </div>
+                                                
+                                                <div class="col">
+                                                    <label for=""><b>FIDE Title</b></label>
+                                                    <select name="fidetitle" id="" class="form-control"  > 
+                                                    <option value="<?php if(isset($_SESSION['fidetitle'])){ echo $_SESSION['fidetitle'];} ?>">
+                                                    <?php echo $_SESSION['fidetitle']; ?></option>
+                                                        <option value="candidate master">Candidate Master</option>
+                                                        <option value="national master">National Master</option>
+                                                        <option value="fide master" >FIDE Master</option>
+                                                        <option value="international master" >International Master</option>
+                                                        <option value="grand master">Grand Master</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
                                             <br>
                                             <input type="submit" value="Save" class="btn btn-primary" style="float: right;">
                                         </form>

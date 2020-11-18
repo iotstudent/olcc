@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="text" name="data"  class="form-control" Placeholder=" Email or Memebrship code">
+                        <input type="text" name="data"  class="form-control" Placeholder=" Email or Membership code">
                     </div>
                     <div class="form-group">
                         <input type="password" name="password"  class="form-control" Placeholder="Password">

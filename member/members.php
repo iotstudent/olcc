@@ -2,11 +2,7 @@
 if(!isset($_SESSION['logged'])){
     header("Location:../member/login.php");
 }
-if($_SESSION['type'] != "management"){
-    header("Location:../member/index.php");
-}
 ?>
-
 <?php include "../includes/head.php";?>
 <?php include "../includes/dbconnection.php";?>
 <title>  Dashboard </title>
@@ -34,7 +30,7 @@ if($_SESSION['type'] != "management"){
                     <!-- search form -->
                     <div class="row mt-4 mb-1">
                       <div class="col-md-12">
-                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
                           <div class="row">
                             <div class="col-10">
                               <input type="text" name="query" class="form-control" placeholder=" Search for member with username or first name or lastname">
@@ -60,18 +56,19 @@ if($_SESSION['type'] != "management"){
                                         <table class="table table-hover table-stripped">
                                             <thead>
                                                 <th></th>
-                                                <th>First name</th>
-                                                <th>Last name</th>
-                                                <th>membership type</th>
-                                                <th>Email</th>
+                                                <th>Name</th>
+                                                <th>code</th>
+                                                <th>Type</th>
                                                 <th>Gender</th>
+                                                <th>Phone</th>
+                                                <th>Email</th>
                                             </thead>
                                             <tbody>
                                             <?php
                                             
                                             
-                                            if(isset($_POST['search'])){
-                                                $query= $_POST['query'];
+                                            if(isset($_GET['search'])){
+                                                $query= $_GET['query'];
                                                 $sql= " SELECT * FROM users WHERE user_firstname LIKE '%$query%' OR user_lastname LIKE '%$query%' OR username LIKE '%$query%'";
                                                 if($result = mysqli_query($conn,$sql)){ 
                                                         if (mysqli_num_rows($result)>0){
@@ -80,21 +77,23 @@ if($_SESSION['type'] != "management"){
                                                                 $user_id= $row['user_id'];
                                                                 $user_firstname = $row['user_firstname'];
                                                                 $user_lastname = $row['user_lastname'];
+                                                                $user_code = $row['user_code'];
                                                                 $user_type = $row['user_type'];
                                                                 $user_email = $row['user_email'];
                                                                 $user_gender = $row['user_gender'];
-                                                               
+                                                                $user_phone = $row['user_phone'];
                                                             
                                                                 ?>
                                                                 
                                                                 <tr>
                                                                     <td><?php echo $n;?></td>
-                                                                    <td><?php echo  $user_firstname;?></td>
-                                                                    <td><?php echo  $user_lastname;?></td>
+                                                                    <td><?php echo  $user_firstname." ".$user_lastname;?></td>
+                                                                    <td><?php echo  $user_code;?></td>
                                                                     <td><?php echo  $user_type;?></td>
-                                                                    <td><?php echo  $user_email;?></td>
                                                                     <td><?php echo  $user_gender;?></td>
-                                                                               
+                                                                    <td><?php echo  $user_phone;?></td>
+                                                                    <td><?php echo  $user_email;?></td>
+                                                                  
                                                                 </tr>
                                                                 
                                                                 <?php  

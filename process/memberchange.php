@@ -30,7 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     } else {
       $rn_password = test_input($_POST["rnpassword"]);
     }   
-    echo "money";
   }
   
   //compare new password and reentered passowrd for matching

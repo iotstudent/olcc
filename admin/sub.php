@@ -36,7 +36,7 @@ include"../includes/dbconnection.php";
                     <div class="row mt-3"> 
                          <!-- search form -->
                         <div class="col-md-12 mb-1">
-                          <form action="search.php" method="get">
+                          <form action="sub.php" method="get">
                             <div class="row">
                               <div class="col-9">
                                 <input type="text" name="query" class="form-control" placeholder=" Search for member by name , username or code">
@@ -68,9 +68,6 @@ include"../includes/dbconnection.php";
                                                 <th>Type</th>
                                                 <th>OLCC ID</th>
                                                 <th>Membership status</th>
-                                                <th>Phone no</th>
-                                                <th>Email</th>
-                                                <th>Gender</th>
                                                 <th></th>
                                             </thead>
                                             <tbody>
@@ -90,9 +87,6 @@ include"../includes/dbconnection.php";
                                                             $user_lastname = $row['user_lastname'];
                                                             $user_type = $row['user_type'];
                                                             $user_code = $row['user_code'];
-                                                            $user_phone = $row['user_phone'];
-                                                            $user_email = $row['user_email'];
-                                                            $user_gender = $row['user_gender'];
                                                             $user_status = $row['user_status'];
                                                         
                                                             ?>
@@ -104,13 +98,10 @@ include"../includes/dbconnection.php";
                                                                 <td><?php echo  $user_type;?></td>
                                                                 <td><?php echo  $user_code;?></td>
                                                                 <td><?php echo  $user_status;?></td>
-                                                                <td><?php echo  $user_phone;?></td>
-                                                                <td><?php echo  $user_email;?></td>
-                                                                <td><?php echo  $user_gender;?></td>
                                                                 <td>
-                                                                    <form action="upgrade.php" method='get' style="display: inline;">
-                                                                            <input type='hidden'  name='userid' value="<?php echo $user_id; ?>" />
-                                                                            <input type='submit' name='formedit' class="btn btn-primary" value="Edit"/>
+                                                                    <form action="pay.php" method='get' style="display: inline;">
+                                                                            <input type='hidden'  name='userid' value=<?php echo $user_id; ?> />
+                                                                            <input type='submit' name='pay' class="btn btn-primary" value="Select"/>
                                                                     </form>
                                                                 </td>               
                                                             </tr>

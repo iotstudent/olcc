@@ -41,12 +41,12 @@
       padding: 12px 5px 12px 15px;
       display: block;
       border-left: 3px solid transparent;
-      color: #fff; }
+      color: #000; }
       .sidebar-menu > li > a > .fa {
         width: 20px; }
     .sidebar-menu > li:hover > a, .sidebar-menu > li.active > a {
       color: #fff;
-      background: #1e282c;
+     background-color:rgba(182,57,59,0.8) !important;
       border-left-color: #3c8dbc; }
     .sidebar-menu > li .label,
     .sidebar-menu > li .badge {
@@ -83,12 +83,14 @@
       padding: 5px 5px 5px 15px;
       display: block;
       font-size: 14px;
-      color: #fff; }
+      color: #000; }
       .sidebar-menu .sidebar-submenu > li > a > .fa {
         width: 20px; }
       .sidebar-menu .sidebar-submenu > li > a > .fa-angle-left,
       .sidebar-menu .sidebar-submenu > li > a > .fa-angle-down {
         width: auto; }
     .sidebar-menu .sidebar-submenu > li.active > a, .sidebar-menu .sidebar-submenu > li > a:hover {
-      color: #fff; }
+      color:rgba(182,57,59,0.8) !important;
+      }
+
 
