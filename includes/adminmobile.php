@@ -30,6 +30,9 @@
                                 <a class="text-white" href="duespayment.php">Subscriptions</a>
                               </li>
                               <li class="nav-item sidenav--link">
+                                  <a class="text-white"href="makepayment.php">Pay for member</a>
+                                </li>
+                              <li class="nav-item sidenav--link">
                                 <a class="text-white" href="vacancy.php">Vacancy</a>
                               </li>
                               <li class="nav-item sidenav--link">
