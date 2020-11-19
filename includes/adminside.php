@@ -54,7 +54,8 @@
         </a>
         <ul class="sidebar-submenu">
           <li><a href="duespayment.php"><i class="fa fa-credit-card"></i>view Subscriptions</a></li>
-          <li><a href="makepayment.php"><i class="fa fa-dollar"></i>Pay for member</a></li>
+          <li><a href="makepayment.php"><i class="fa fa-dollar"></i>Pay for Member</a></li>
+          <li><a href="records.php"><i class="fa fa-server"></i>Member Records</a></li>
         </ul>
       </li>
 
